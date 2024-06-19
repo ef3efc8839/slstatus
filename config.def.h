@@ -1,8 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 
-/* interval between updates (in ms) */
-const unsigned int interval = 1000;
-
+/* interval between updates (in ms) */ const unsigned int interval = 1000;
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
 
@@ -66,10 +64,8 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	{ cpu_perc,	    "CPU:[%2s%,",   NULL},
-	{ temp,		    " %2s°C] ",	"/sys/class/thermal/thermal_zone6/temp"},
+	{ temp,		    " %2s°C] ",	"/sys/class/hwmon/hwmon3/temp1_input"},
 	{ ram_perc,	    "RAM:[%2s%] ",  NULL  },
-	{ battery_perc,	    "BAT:[%s%,",  "BAT1"},
-	{ battery_perc,	    " %s%] ",  "BAT0"},
         { keymap,	    "[%s] ", NULL},
         { datetime,         "[%s]",     "%a %d/%m/%y %H:%M" },
 };
